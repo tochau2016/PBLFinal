@@ -5,7 +5,7 @@ function TypeApi() {
   const [types, setTypes] = useState([]);
 
   const getTypes = async () => {
-    const res = await axios.get('https://pbl-final11.onrender.com/api/type');
+    const res = await axios.get('http://localhost:5000/api/type');
     setTypes(res.data);
   };
   useEffect(() => {

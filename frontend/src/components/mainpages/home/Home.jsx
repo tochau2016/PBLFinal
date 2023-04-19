@@ -13,10 +13,10 @@ export const Home = ({ hideHeaderPaths = [] }) => {
     <>
       {/* {!hideHeaderPaths.includes(pathname) && <Header />} */}
       <div className="home-container">
-        <Banner />
+        {/* <Banner />
         <Service />
         <About />
-        <Pup />
+        <Pup /> */}
       </div>
     </>
   );

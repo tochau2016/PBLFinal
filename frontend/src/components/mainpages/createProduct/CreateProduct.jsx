@@ -160,7 +160,7 @@ function CreateProduct() {
       if (onEdit) {
         console.log(edit)
         await axios.put(
-          `/api/products/${product._id}`,
+          `http://localhost:5000/api/products/${product._id}`,
           { ...edit, images },
           {
             headers: { Authorization: token },
@@ -170,7 +170,7 @@ function CreateProduct() {
       } else {
         console.log(rs);
         await axios.post(
-          '/api/products',
+          'http://localhost:5000/api/products',
           { ...rs, images },
           {
             headers: { Authorization: token },

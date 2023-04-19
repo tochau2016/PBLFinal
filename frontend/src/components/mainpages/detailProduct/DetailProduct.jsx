@@ -33,7 +33,7 @@ function DetailProduct() {
     if (params.id) {
       const getFeedback = async () => {
         try {
-          const res = await axios.get(`/api/products/${params.id}`);
+          const res = await axios.get(`http://localhost:5000/api/products/${params.id}`);
           setFeedback(res.data.feedbacks);
         } catch (err) {
           alert(err.response.data.msg);

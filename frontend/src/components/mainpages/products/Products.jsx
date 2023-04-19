@@ -28,13 +28,13 @@ function Products() {
     try {
       setLoading(true);
       const destroyImg = axios.post(
-        'https://petshop-bn3rzeehqq-uc.a.run.app/api/destroy',
+        'http://localhost:5000/api/destroy',
         { public_id },
         {
           headers: { Authorization: token },
         }
       );
-      const deleteProduct = axios.delete(`/api/products/${id}`, {
+      const deleteProduct = axios.delete(`http://localhost:5000/api/products/${id}`, {
         headers: { Authorization: token },
       });
 
