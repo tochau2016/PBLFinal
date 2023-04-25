@@ -1,10 +1,19 @@
 input[type='text'],
 select {
   width: 50%;
-  /* padding: 12px; */
-  border: 1px solid #ccc;
-  /* border-radius: 4px; */
-  resize: vertical;
+    /* padding: 12px; */
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    /* resize: vertical; */
+    padding: 7px 40px 7px 12px;
+    border: 1px solid #e8eaed;
+    background: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    /* min-width: 200px; */
+    transition: all 150ms ease;
 }
 
 label {

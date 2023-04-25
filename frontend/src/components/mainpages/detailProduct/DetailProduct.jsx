@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { GlobalState } from '../../../GlobalState';
 import ProductItem from '../utils/productItem/ProductItem';
 import { FaStar } from 'react-icons/fa';
+import {BsFillCartPlusFill} from 'react-icons/bs'
 import Feedback from './Feedback';
 import axios from 'axios';
 import FeedbackItem from './FeedbackItem';
@@ -64,16 +65,16 @@ function DetailProduct() {
   //     setScore(item.rating)
   //   })
   // },[]);
-  const onEnter = ({ currentTarget }) => {
-    gsap.to(currentTarget, {
-      repeatDelay: 1,
-      yoyo: true,
-      scale: 1.5,
-    });
-  };
-  const onLeave = ({ currentTarget }) => {
-    gsap.to(currentTarget, { scale: 1 });
-  };
+  // const onEnter = ({ currentTarget }) => {
+  //   gsap.to(currentTarget, {
+  //     repeatDelay: 1,
+  //     yoyo: true,
+  //     scale: 1.5,
+  //   });
+  // };
+  // const onLeave = ({ currentTarget }) => {
+  //   gsap.to(currentTarget, { scale: 1 });
+  // };
 
   if (detailProduct.length === 0) return null;
   console.log(detailProduct);
@@ -94,8 +95,6 @@ function DetailProduct() {
     <>
       <div className="detail">
         <img
-          onMouseEnter={onEnter}
-          onMouseLeave={onLeave}
           src={detailProduct.images.url}
           alt=""
         />
@@ -117,6 +116,7 @@ function DetailProduct() {
           <span>{type.price} $</span>&nbsp;&nbsp;&nbsp;&nbsp;stock: <span>{type.amount}</span>
           <p>{detailProduct.description}</p>
           <b />
+          <div className='choose-type'>
           <label htmlFor="types">Choose a type:</label>
           <select onChange={checktype} name="type" id="type">
             {detailProduct.types.map((type) => (
@@ -125,22 +125,29 @@ function DetailProduct() {
               </option>
             ))}
           </select>
+          </div>
           <Link
             to={`/detail/${detailProduct._id}`}
             className="cart"
             onClick={() => addCart(detailProduct, type)}
           >
-            Add to cart
+            <BsFillCartPlusFill />Add to cart
           </Link>
+          <br/>
+          <div className="underline"></div>
+          <br/>
+          <h2>Category : </h2>
         </div>
       </div>
       <br />
+      <div className='des-rating'>
       <div className="description-detail">
-        <h1>Description</h1>
+        <h2>Description</h2>
         <hr />
         <p>{detailProduct.description}</p>
       </div>
       <Feedback feedback={feedback} />
+      </div>
       <br />
       <div className="product-info-tabs">
         <div className="header-feedback">

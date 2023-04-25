@@ -1,0 +1,26 @@
+.shop-by-category {
+    margin: 25px 0;
+    .categories {
+        display: flex;
+        // flex-flow: wrap;
+        gap: 10px;
+        max-width: unset;
+        flex-wrap: unset;
+        .category {
+            // background-color: black;
+            // width: calc(50% - 5px);
+            cursor: pointer;
+            overflow: hidden;
+            img {
+                display: block;
+                transition: all ease 0.3s;
+                object-fit: cover;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.products-container{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-around;
+    .sec-heading{
+
+    }
+    .innerPage{
+        display: flex;
+        flex-flow: wrap;
+        gap: 10px;
+    }
+}

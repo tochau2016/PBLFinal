@@ -1,0 +1,22 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px 5px rgb(229, 232, 233);
+    padding: 10px;
+    .thumbnail{
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .prod-details{
+        display: flex;
+        flex-direction: column;
+        .names{
+
+        }
+        .prices{
+
+        }
+    }
+}

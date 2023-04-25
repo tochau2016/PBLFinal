@@ -33,11 +33,11 @@ function Pages() {
 
   return (
     <Switch>
-      {/* <Route path="/" exact component={Home} /> */}
+      <Route path="/" exact component={Home} />
       <Route path="/about" exact component={About} />
       <Route path="/comment/:id" exact component={Comment} />
       <Route path="/contact" exact component={Contact} />
-      <Route path="/" exact component={Products} />
+      <Route path="/products" exact component={Products} />
       <Route path="/detail/:id" exact component={DetailProduct} />
       <Route
         path="/processed"

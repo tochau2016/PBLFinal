@@ -18,7 +18,9 @@
     "react-rating": "^2.0.5",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "recharts": "^2.2.0"
+    "recharts": "^2.2.0",
+    "sass": "^1.62.0",
+    "scss": "^0.2.4"
   },
   "scripts": {
     "dev": "vite",

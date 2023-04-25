@@ -1,24 +1,21 @@
 import React from 'react';
 import { Banner } from './banner/Banner';
-import { Pup } from './pup/Pup';
-import { Service } from './ourservice/Service';
-import './home.css'
+import './home.scss'
+import CategoryItem from './category/Category';
+import ProductShowHome from './product/ProductShowHome';
 
 
-import { About } from '../about/About';
-
-
-export const Home = ({ hideHeaderPaths = [] }) => {
+export const Home = () => {
   return (
-    <>
-      {/* {!hideHeaderPaths.includes(pathname) && <Header />} */}
-      <div className="home-container">
-        {/* <Banner />
-        <Service />
-        <About />
-        <Pup /> */}
-      </div>
-    </>
+    <div>
+        <Banner/>
+        <div className="main-content">
+          <div className="layout">
+            <CategoryItem/>
+            <ProductShowHome/>
+          </div>
+        </div>
+    </div>
   );
 };
 
