@@ -97,6 +97,19 @@
         padding: 8px 12px;
         outline-color: #1464f4;
       }
+      .form-group {
+        position: relative;
+        width: fit-content;
+        .pwd-icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
 
 
     }

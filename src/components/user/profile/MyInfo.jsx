@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import ProfileOption from "./ProfileOption";
+import PasswordField from "./PasswordField";
 
 
 function MyInfo() {
   const [isEdit, setIsEdit] = useState(false);
-  const [passwordShown, setPasswordShown] = useState(false);
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  };
+  
   console.log(isEdit)
 
   return (
@@ -27,26 +25,14 @@ function MyInfo() {
           <span className="title">Password</span>
           {isEdit ? (
             <form action="">
-              <div className="form-group">
-                <input
-                  type={passwordShown ? "text" : "password"}
-                  name="oldPwd"
-                  placeholder="Nhập mật khẩu cũ..."
-                />
-                <button
-                  onClick={togglePassword}
-                >aaa</button>
-              </div>
-              <div className="form-group">
-                <input
-                  type={passwordShown ? "text" : "password"}
-                  name="newPwd1"
-                  placeholder="Nhập mật khẩu mới..."
-                />
-                <button
-                  onClick={togglePassword}
-                >aaa</button>
-              </div>
+              <PasswordField
+                inputName="oldPwd"
+                placeholder="Type old password..."
+              />
+              <PasswordField
+                inputName="newPwd"
+                placeholder="Type new password..."
+              />
               <div className="form-action">
                 <button
                   className="update-pwd-btn"
@@ -58,7 +44,7 @@ function MyInfo() {
                   className="cancel-change-pwd"
                   onClick={() => setIsEdit(false)}
                 >
-                  Hủy
+                  Cancel
                 </button>
               </div>
             </form>
